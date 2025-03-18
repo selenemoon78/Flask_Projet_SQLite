@@ -79,3 +79,8 @@ def enregistrer_client():
                                                                                                                                        
 if __name__ == "__main__":
   app.run(debug=True)
+
+
+@app.route('/fiche_nom')
+def formulaire_client():
+    return render_template('formulaire.html')
