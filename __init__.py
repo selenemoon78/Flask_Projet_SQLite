@@ -8,7 +8,7 @@ import sqlite3
 app = Flask(__name__)                                                                                                                  
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'  # Clé secrète pour les sessions
 
-# #Fonction pour créer une clé "authentifie" dans la session utilisateur!!
+# Fonction pour créer une clé "authentifie" dans la session utilisateur
 def est_authentifie():
     return session.get('authentifie')
 
@@ -22,7 +22,7 @@ def lecture():
         # Rediriger vers la page d'authentification si l'utilisateur n'est pas authentifié
         return redirect(url_for('authentification'))
 
-  # Si l'utilisateeur est authentifié!!
+  # Si l'utilisateur est authentifié
     return "<h2>Bravo, vous êtes authentifié</h2>"
 
 @app.route('/authentification', methods=['GET', 'POST'])
@@ -79,8 +79,3 @@ def enregistrer_client():
                                                                                                                                        
 if __name__ == "__main__":
   app.run(debug=True)
-
-
-@app.route('/fiche_nom')
-def formulaire_client():
-    return render_template('formulaire.html')
