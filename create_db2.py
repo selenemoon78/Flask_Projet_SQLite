@@ -1,4 +1,4 @@
-import sqlite3
+import sqlite
 
 connection = sqlite3.connect('database2.db')
 
